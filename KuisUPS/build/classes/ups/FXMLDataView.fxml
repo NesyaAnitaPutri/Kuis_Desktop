@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ups.FXMLDataViewController">
+   <children>
+      <TableView fx:id="tblUps" layoutX="13.0" layoutY="33.0" prefHeight="507.0" prefWidth="924.0">
+        <columns>
+          <TableColumn fx:id="colKd_ups" prefWidth="141.0" text="Kode UPS" />
+          <TableColumn fx:id="colNama_produk" prefWidth="197.0" text="Nama Produk" />
+            <TableColumn fx:id="colTglProduksi" prefWidth="165.0" text="Tanggal Produksi" />
+            <TableColumn fx:id="colMerk" minWidth="0.0" prefWidth="169.0" text="Merk" />
+            
+            <TableColumn fx:id="colHarga" prefWidth="134.0" text="Harga" />
+        </columns>
+      </TableView>
+      <MenuBar layoutX="6.0" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Data">
+            <items>
+                <MenuItem fx:id="menuEditData" disable="true" mnemonicParsing="false" onAction="#viewEditDataUps" text="Edit" />
+              <MenuItem fx:id="menuDeleteData" disable="true" mnemonicParsing="false" onAction="#deleteDataUps" text="Delete" />
+                  <MenuItem fx:id="menuAddData" mnemonicParsing="false" onAction="#viewAddDataForm" text="Tambah Data" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
